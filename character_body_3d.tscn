@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://1pwe5ylcnaqq"]
+
+[ext_resource type="PackedScene" uid="uid://cjm180oqt1gcm" path="res://MyBelovedCharacter.glb" id="1_fb3t6"]
+[ext_resource type="Script" uid="uid://y42emmw66ghj" path="res://player.gd" id="2_vd578"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fb3t6"]
+size = Vector2(50, 50)
+
+[node name="CharacterBody3D" type="Node3D"]
+script = ExtResource("2_vd578")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_fb3t6")
+
+[node name="MyBelovedCharacter" parent="." instance=ExtResource("1_fb3t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="CameraPivot" type="Node3D" parent="MyBelovedCharacter"]
+
+[node name="Camera3D" type="Camera3D" parent="MyBelovedCharacter/CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.96312976, 0.26903746, 0, -0.26903746, 0.96312976, 0, 9.6763935, 10.917179)
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MyBelovedCharacter"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

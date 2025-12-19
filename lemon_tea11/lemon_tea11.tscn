@@ -1,0 +1,141 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnhbsbtxkdg1i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qqxk"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.050980393)
+metallic_specular = 1.0
+roughness = 0.05
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uh5nf"]
+material = SubResource("StandardMaterial3D_7qqxk")
+top_radius = 0.3
+bottom_radius = 0.25
+height = 0.8
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2c3jv"]
+top_radius = 0.27
+bottom_radius = 0.22
+height = 0.6
+radial_segments = 48
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8v6th"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0.98039216, 0.5529412, 0, 0.84705883)
+roughness = 0.2
+clearcoat_enabled = true
+clearcoat = 0.2
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5qc3x"]
+custom_aabb = AABB(0, 0.5, 0, 0, 0, 0)
+top_radius = 0.28
+bottom_radius = 0.32
+height = 0.02
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7qqxk"]
+top_radius = 0.03
+bottom_radius = 0.03
+height = 0.7
+radial_segments = 32
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uh5nf"]
+albedo_color = Color(0.2989732, 0.07846651, 0.13617286, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7qqxk"]
+size = Vector3(0.09, 0.09, 0.09)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2c3jv"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.7294118)
+metallic_specular = 0.9
+roughness = 0.05
+refraction_enabled = true
+refraction_scale = 0.02
+
+[node name="LemonTea" type="Node3D"]
+
+[node name="cup" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026473999, 0.052675247, 0.026878357)
+mesh = SubResource("CylinderMesh_uh5nf")
+
+[node name="Tea" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7188182, 0, 0.69519806, 0, 1, 0, -0.69519806, 0, 0.7188182, -0.033745646, -0.018823236, 0.019590944)
+mesh = SubResource("CylinderMesh_2c3jv")
+surface_material_override/0 = SubResource("StandardMaterial3D_8v6th")
+
+[node name="Lid" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61521304, 1.1836548)
+visible = false
+mesh = SubResource("CylinderMesh_5qc3x")
+
+[node name="Straw" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.96592575, -0.022557562, 0.25783414, 0, 0.99619466, 0.08715573, -0.258819, -0.084185965, 0.9622501, 0.045379937, 0.52, -0.015380859)
+mesh = SubResource("CylinderMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_uh5nf")
+
+[node name="Ice" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.51516664, 0.28844696, -0.8070944, -0.15519468, 0.95749605, 0.24313833, 0.8429221, -3.6946304e-09, 0.53803533, 0.0052490234, 0.23791504, -0.13317871)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.51516664, 0.28844696, -0.8070944, -0.15519468, 0.95749605, 0.24313833, 0.8429221, -3.6946304e-09, 0.53803533, 0, 0.26715088, -0.13317871)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13061523, 0.2545166, -0.036499023)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.87692815, 0.4806215, 0, -0.4806215, 0.87692815, 0, 0, 0, 1, -0.0025634766, 0.25231934, 0.12780762)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18261719, 0.25134277, -0.028198242)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8918686, 0.45229462, 0, -0.45229462, 0.8918686, 0, 0, 0, 1, -0.13922119, 0.2599945, 0.13671875)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8918686, 0.45229462, 0, -0.45229462, 0.8918686, 0, 0, 0, 1, 0.1182251, 0.25134277, 0.12573242)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6277499, -0.30476847, 0.055193547, 0.29895777, 0.6288327, 0.07206757, -0.08095917, -0.041056942, 0.6940893, -0.19989014, 0.18560791, -0.1048584)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice9" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.624308, 0.31660622, 0, -0.23668046, 0.46670434, 0.46494016, 0.21028991, -0.4146655, 0.5232882, 0.00091552734, 0.11293793, -0.08853912)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice12" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5612914, 0.28464854, 0.30647543, -0.41165173, 0.28503412, 0.48918134, 0.07412696, -0.57247776, 0.39594758, 0.015319824, -0.06890869, 0.13024902)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice13" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5211902, 0.26431194, 0.3853569, -0.31660622, 0.624308, 0, -0.34368768, -0.17429483, 0.58438003, -0.035491943, 0.049743652, 0.11453247)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice15" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2204161, 0.45832887, -0.48098993, 0.66436756, -0.15640394, 0.15541458, -0.005711033, -0.5054428, -0.48424685, -0.035491943, 0.12785149, 0.03918457)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
+
+[node name="Ice14" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5497304, 0.27878556, 0.33177575, 0.3659146, -0.5857342, -0.11411353, 0.23217025, 0.26304746, -0.6057252, -0.09378052, 0.055999756, -0.12997437)
+mesh = SubResource("BoxMesh_7qqxk")
+surface_material_override/0 = SubResource("StandardMaterial3D_2c3jv")
