@@ -4,18 +4,19 @@ extends PathFollow3D
 @export var stop_point_index: int = 5
 
 var ai_state := "walking"
-var wait_timer := 3.0
+var wait_timer := 10.0
 
 func _process(delta):
 	match ai_state:
 		"walking":
 			progress += walk_speed * delta
 			check_stop_point()
-
+		
 		"waiting":
 			wait_timer -= delta
 			if wait_timer <= 0:
-				ai_state = "done"
+				ai_state = "walking"
+			
 
 		"done":
 			pass
@@ -36,4 +37,4 @@ func check_stop_point():
 
 	if closest_index == stop_point_index:
 		ai_state = "waiting"
-		wait_timer = 3.0
+		wait_timer = 10.0

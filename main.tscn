@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://dm4myeaybwprl"]
+[gd_scene load_steps=79 format=3 uid="uid://dm4myeaybwprl"]
 
 [ext_resource type="Texture2D" uid="uid://c7o5bi7vrk858" path="res://Untitled design.png" id="1_efxa6"]
 [ext_resource type="PackedScene" uid="uid://datl01k40pr6b" path="res://glass_wall_3d.tscn" id="2_4lmeg"]
@@ -42,9 +42,14 @@
 [ext_resource type="ArrayMesh" uid="uid://drx3c85cfh03l" path="res://addons/kaykit_restaurant_bits/Assets/obj/wall_doorway.obj" id="40_0cp0l"]
 [ext_resource type="ArrayMesh" uid="uid://cipoyejb5373q" path="res://addons/kaykit_restaurant_bits/Assets/obj/door_B.obj" id="41_d2t1y"]
 [ext_resource type="Script" uid="uid://cppi6q6hkn5qn" path="res://path_follow_3d.gd" id="42_d2t1y"]
-[ext_resource type="PackedScene" uid="uid://cjm180oqt1gcm" path="res://MyBelovedCharacter.glb" id="43_gngh3"]
 [ext_resource type="Script" uid="uid://d2lbay4vtbpg2" path="res://customer_walkin.gd" id="44_0n3wm"]
+[ext_resource type="PackedScene" uid="uid://dbtayfhsqyqsv" path="res://Walking_ani.glb" id="44_uypp3"]
 [ext_resource type="Script" uid="uid://cx3d4hhbnkxwo" path="res://main_character.gd" id="45_0n3wm"]
+[ext_resource type="Script" uid="uid://yi5wsvme56eu" path="res://customer.gd" id="45_hrvbo"]
+[ext_resource type="PackedScene" uid="uid://cnhbsbtxkdg1i" path="res://lemon_tea11/lemon_tea11.tscn" id="46_f6a44"]
+[ext_resource type="ArrayMesh" uid="uid://yqe6am36a85i" path="res://addons/kaykit_restaurant_bits/Assets/obj/kitchentable_A.obj" id="47_0cbny"]
+[ext_resource type="PackedScene" uid="uid://8df3ks012wqd" path="res://soda_fountain_machine.glb" id="48_hrvbo"]
+[ext_resource type="Script" uid="uid://bqbbgntko5i87" path="res://lemon_tea11/lemon_tea.gd" id="48_uypp3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ryguw"]
 panorama = ExtResource("1_efxa6")
@@ -186,7 +191,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.7
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, -7)
 
 [node name="wall11" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 13, 0, -6.75)
+transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 13.75, 0, -10.75)
 
 [node name="wall12" parent="." instance=ExtResource("8_074og")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -13)
@@ -201,10 +206,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 0, -13)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, -13)
 
 [node name="sophia" parent="." instance=ExtResource("11_efxa6")]
-transform = Transform3D(-5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, -5.9604645e-08, 17, 0, 5)
+transform = Transform3D(-5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, -5.9604645e-08, 17, 0, -14)
 
 [node name="SophiaSkin" parent="." instance=ExtResource("12_w48qg")]
-transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 18, 0, -4)
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 18, 0, -11)
 
 [node name="wall3" parent="." instance=ExtResource("8_074og")]
 transform = Transform3D(-1.0927847e-08, 0, 1, 0, 1, 0, -0.25, 0, -4.371139e-08, -11.25, 0, 11.9)
@@ -433,7 +438,7 @@ transform = Transform3D(-6.556708e-08, 0, 1, 0, 1, 0, -1.5, 0, -4.371139e-08, -9
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1, 7.5)
 
 [node name="fridge_B2" parent="." instance=ExtResource("24_htxhm")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9, 0, -10)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, -10)
 
 [node name="jar_A_small2" parent="." instance=ExtResource("25_jq2sk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1, 7)
@@ -696,34 +701,59 @@ mesh = ExtResource("41_d2t1y")
 [node name="Node3D5" parent="." instance=ExtResource("2_4lmeg")]
 transform = Transform3D(-4.371139e-08, 0, 1.7, 0, 1, 0, -1, 0, -7.430936e-08, 12, 2, 12)
 
-[node name="Path3D" type="Path3D" parent="."]
+[node name="Car_Path" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, 0, 6)
 curve = SubResource("Curve3D_gngh3")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+[node name="PathFollow3D" type="PathFollow3D" parent="Car_Path"]
 transform = Transform3D(0.99999684, 0, 8.74225e-08, 0, 1, 0, -8.74225e-08, 0, 0.99999684, 0, 0, 0)
 use_model_front = true
 script = ExtResource("42_d2t1y")
 
-[node name="car" parent="Path3D/PathFollow3D" instance=ExtResource("39_h8e4i")]
+[node name="car" parent="Car_Path/PathFollow3D" instance=ExtResource("39_h8e4i")]
 
-[node name="Path3D2" type="Path3D" parent="."]
+[node name="Customer_Path" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 3)
 curve = SubResource("Curve3D_rnkwl")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2"]
-transform = Transform3D(0.013346942, -1.4256677e-05, 0.9999082, -4.6895566e-13, 1, 1.42579065e-05, -0.9999082, -1.9030098e-07, 0.013346942, 0.04877472, 0.012285233, 0.018571138)
+[node name="PathFollow3D" type="PathFollow3D" parent="Customer_Path"]
+transform = Transform3D(-0.013347031, 1.4256676e-05, -0.9999082, -4.547461e-13, 1, 1.42579065e-05, 0.9999082, 1.903022e-07, -0.013347031, 0.04877472, 0.012285233, 0.018571138)
 use_model_front = true
 script = ExtResource("44_0n3wm")
 
-[node name="MyBelovedCharacter" parent="Path3D2/PathFollow3D" instance=ExtResource("43_gngh3")]
-transform = Transform3D(0.29997325, 2.2141335e-06, 0.004004235, -2.046552e-06, 0.29999998, -1.2569066e-05, -0.004004235, 1.2540629e-05, 0.29997325, 0.031265736, -0.012271677, 0.9508915)
+[node name="Walking_ani" parent="Customer_Path/PathFollow3D" instance=ExtResource("44_uypp3")]
+transform = Transform3D(0.29997414, -1.3210277e-13, 0.0040041716, 5.709124e-08, 0.30000004, -4.2770034e-06, -0.0040041716, 4.2773495e-06, 0.29997414, 0.99534225, -0.012299998, 1.0355816)
+script = ExtResource("45_hrvbo")
 
-[node name="MyBelovedCharacter" parent="." instance=ExtResource("43_gngh3")]
-transform = Transform3D(0, 0, -0.29999998, 0, 0.29999998, 0, 0.29999998, 0, 0, 21, 0, -2)
+[node name="Area3D" type="Area3D" parent="Customer_Path/PathFollow3D/Walking_ani"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Customer_Path/PathFollow3D/Walking_ani/Area3D"]
+
+[node name="Main_Character" parent="." instance=ExtResource("44_uypp3")]
+transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, 21, 0, -5)
 script = ExtResource("45_0n3wm")
 
-[node name="CameraPivot" type="Node3D" parent="MyBelovedCharacter"]
+[node name="CameraPivot" type="Node3D" parent="Main_Character"]
 
-[node name="Camera3D" type="Camera3D" parent="MyBelovedCharacter/CameraPivot"]
-transform = Transform3D(-3.3333335, 3.7711157e-08, -2.864445e-07, -3.771113e-08, 3.219753, 0.8627305, 2.8644448e-07, 0.8627305, -3.219753, -1.0000005, 13.33333, -13.333366)
+[node name="Camera3D" type="Camera3D" parent="Main_Character/CameraPivot"]
+transform = Transform3D(-3.333333, 3.7711136e-08, 2.9637414e-07, 1.1313342e-07, 3.2197526, 0.86273015, -2.7651504e-07, 0.86273015, -3.2197526, 0, 16.666664, -16.666664)
+
+[node name="HandSlot" type="Node3D" parent="Main_Character"]
+transform = Transform3D(0.99999976, 0, 3.5527137e-15, 0, 0.99999976, 0, -3.5527137e-15, 0, 0.99999976, -2, 3, 0)
+
+[node name="LemonTea" parent="." instance=ExtResource("46_f6a44")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.4, 1.35, -6)
+script = ExtResource("48_uypp3")
+
+[node name="Area3D" type="Area3D" parent="LemonTea"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LemonTea/Area3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="LemonTea"]
+
+[node name="KitchentableA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
+mesh = ExtResource("47_0cbny")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("48_hrvbo")]
+transform = Transform3D(-2, 0, 2.3841858e-07, 0, 2, 0, -2.3841858e-07, 0, -2, -10, 1.75, -6)
