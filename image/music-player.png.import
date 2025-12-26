@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqpdy35wvf7ke"
-path="res://.godot/imported/Rice_Untitled-design-2023-12-14T160614.jpg-10d0bb7b1d6e8bdfe949688a0bb368d3.ctex"
+uid="uid://tluftfns5m76"
+path="res://.godot/imported/music-player.png-9ad5f4f0f53a26ca92d43f5b14b260af.ctex"
 metadata={
 "vram_texture": false
-}
-generator_parameters={
-"md5": "69f9742cb9aefc16c99ba0a2609e362b"
 }
 
 [deps]
 
-source_file="res://Rice_Untitled-design-2023-12-14T160614.jpg"
-dest_files=["res://.godot/imported/Rice_Untitled-design-2023-12-14T160614.jpg-10d0bb7b1d6e8bdfe949688a0bb368d3.ctex"]
+source_file="res://image/music-player.png"
+dest_files=["res://.godot/imported/music-player.png-9ad5f4f0f53a26ca92d43f5b14b260af.ctex"]
 
 [params]
 
@@ -26,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

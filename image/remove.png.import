@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2n3oju4udeyd"
-path="res://.godot/imported/Rice_Porcelain_normal.jpg-20819bb19a55bb0500154242f630284c.ctex"
+uid="uid://dvmio3elcswd0"
+path="res://.godot/imported/remove.png-4a0651e3e4b9dffd50a7dfb94b30ba16.ctex"
 metadata={
 "vram_texture": false
-}
-generator_parameters={
-"md5": "7fab6787872c5d983d8bf8c63c9e5b43"
 }
 
 [deps]
 
-source_file="res://Rice_Porcelain_normal.jpg"
-dest_files=["res://.godot/imported/Rice_Porcelain_normal.jpg-20819bb19a55bb0500154242f630284c.ctex"]
+source_file="res://image/remove.png"
+dest_files=["res://.godot/imported/remove.png-4a0651e3e4b9dffd50a7dfb94b30ba16.ctex"]
 
 [params]
 
@@ -26,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

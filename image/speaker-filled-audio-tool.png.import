@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ptna40ah0a1k"
-path="res://.godot/imported/Rice___opt__aboutcom__coeus__resources__content_migration__serious_e.jpg-f8ceee49960d7c4dbecae15d26ff2344.ctex"
+uid="uid://dgv4w8e4xwgti"
+path="res://.godot/imported/speaker-filled-audio-tool.png-0066161bbe3a311ab4a5250f57377fba.ctex"
 metadata={
 "vram_texture": false
-}
-generator_parameters={
-"md5": "b61410d4acf3e17d42bcfe2b63fe7ca8"
 }
 
 [deps]
 
-source_file="res://Rice___opt__aboutcom__coeus__resources__content_migration__serious_e.jpg"
-dest_files=["res://.godot/imported/Rice___opt__aboutcom__coeus__resources__content_migration__serious_e.jpg-f8ceee49960d7c4dbecae15d26ff2344.ctex"]
+source_file="res://image/speaker-filled-audio-tool.png"
+dest_files=["res://.godot/imported/speaker-filled-audio-tool.png-0066161bbe3a311ab4a5250f57377fba.ctex"]
 
 [params]
 
@@ -26,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

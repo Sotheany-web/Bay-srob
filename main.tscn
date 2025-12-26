@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://dm4myeaybwprl"]
+[gd_scene load_steps=80 format=3 uid="uid://dm4myeaybwprl"]
 
 [ext_resource type="Texture2D" uid="uid://c7o5bi7vrk858" path="res://Untitled design.png" id="1_efxa6"]
 [ext_resource type="PackedScene" uid="uid://datl01k40pr6b" path="res://glass_wall_3d.tscn" id="2_4lmeg"]
@@ -50,6 +50,7 @@
 [ext_resource type="ArrayMesh" uid="uid://yqe6am36a85i" path="res://addons/kaykit_restaurant_bits/Assets/obj/kitchentable_A.obj" id="47_0cbny"]
 [ext_resource type="PackedScene" uid="uid://8df3ks012wqd" path="res://soda_fountain_machine.glb" id="48_hrvbo"]
 [ext_resource type="Script" uid="uid://bqbbgntko5i87" path="res://lemon_tea11/lemon_tea.gd" id="48_uypp3"]
+[ext_resource type="PackedScene" uid="uid://cf3tsij4ruoiu" path="res://main_menu_t.tscn" id="51_uypp3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ryguw"]
 panorama = ExtResource("1_efxa6")
@@ -60,6 +61,20 @@ sky_material = SubResource("PanoramaSkyMaterial_ryguw")
 [sub_resource type="Environment" id="Environment_1u8w0"]
 background_mode = 2
 sky = SubResource("Sky_d13ii")
+
+[sub_resource type="Curve3D" id="Curve3D_gngh3"]
+_data = {
+"points": PackedVector3Array(0, 0, -0.3, 0, 0, 0.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, -1, 0, -1, 1, 0, 1, 1, 0, 8, 0, 0, 0, 0, 0, 0, 8.642929, 0, 8.327975, 0, 0, 0, 0, 0, 0, 11.159652, 0, 8.318921, 0, 0, 0, 0, 0, 0, 15.967546, 0, 8.324268, 0, 0, 0, 0, 0, 0, 22.365383, 0, 8.36001, 0, 0, 0, 0, 0, 0, 29.165058, 0, 8.443945, 0, 0, 0, 0, 0, 0, 34.839596, 0, 8.432663, 0, 0, 0, 0, 0, 0, 40.665558, 0, 8.486277),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 10
+
+[sub_resource type="Curve3D" id="Curve3D_rnkwl"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.04877472, 0.012285233, 0.018571138, 0, 0, 0, 0, 0, 0, -3.0277634, 0.012329102, -0.022495508, 0, 0, 0, 0, 0, 0, -7.087652, 0.012329102, 0.0095562935, 0, 0, 0, 0, 0, 0, -13.341438, 0.012329102, 0.060694456, 0.4, 0, 0.1, -0.4, 0, -0.1, -18.982548, 0.012329102, -0.078196764, -0.5, 0, 0.1, 0.5, 0, -0.1, -19.023912, 0.012329102, -2.084049, 0, 0, 0, 0, 0, 0, -14.95401, 0.012329102, -2.098584, 0, 0, 0, 0, 0, 0, -11.073069, 0.012329102, -2.0695136),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 8
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0odxb"]
 size = Vector2(24, 26)
@@ -130,630 +145,622 @@ size = Vector2(35, 25)
 [sub_resource type="BoxShape3D" id="BoxShape3D_blkrb"]
 size = Vector3(1, 0.1, 1)
 
-[sub_resource type="Curve3D" id="Curve3D_gngh3"]
-_data = {
-"points": PackedVector3Array(0, 0, -0.3, 0, 0, 0.3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, -1, 0, -1, 1, 0, 1, 1, 0, 8, 0, 0, 0, 0, 0, 0, 8.642929, 0, 8.327975, 0, 0, 0, 0, 0, 0, 11.159652, 0, 8.318921, 0, 0, 0, 0, 0, 0, 15.967546, 0, 8.324268, 0, 0, 0, 0, 0, 0, 22.365383, 0, 8.36001, 0, 0, 0, 0, 0, 0, 29.165058, 0, 8.443945, 0, 0, 0, 0, 0, 0, 34.839596, 0, 8.432663, 0, 0, 0, 0, 0, 0, 40.665558, 0, 8.486277),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 10
-
-[sub_resource type="Curve3D" id="Curve3D_rnkwl"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.04877472, 0.012285233, 0.018571138, 0, 0, 0, 0, 0, 0, -3.0277634, 0.012329102, -0.022495508, 0, 0, 0, 0, 0, 0, -7.087652, 0.012329102, 0.0095562935, 0, 0, 0, 0, 0, 0, -13.341438, 0.012329102, 0.060694456, 0.4, 0, 0.1, -0.4, 0, -0.1, -18.982548, 0.012329102, -0.078196764, -0.5, 0, 0.1, 0.5, 0, -0.1, -19.023912, 0.012329102, -2.084049, 0, 0, 0, 0, 0, 0, -14.95401, 0.012329102, -2.098584, 0, 0, 0, 0, 0, 0, -11.073069, 0.012329102, -2.0695136),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 8
-
 [node name="Main" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1u8w0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-mesh = SubResource("PlaneMesh_0odxb")
+[node name="MainMenu" parent="." instance=ExtResource("51_uypp3")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -17.8)
-mesh = SubResource("PlaneMesh_lswn8")
+[node name="GameplayRoot" type="Node3D" parent="."]
 
-[node name="Node3D" parent="MeshInstance3D" instance=ExtResource("2_4lmeg")]
-transform = Transform3D(0.0088312235, 0, 1.5999377, 0, 1, 0, -0.999961, 0, 0.014129958, -7.5, 2, 12.243)
-
-[node name="wall_half5" parent="." instance=ExtResource("3_ycdy4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.25, 0, -20)
-
-[node name="wall6" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(7.450581e-09, 0, 1, 0, 1, 0, -0.25, 0, 2.9802322e-08, -11.3, 0, 3.5)
-
-[node name="wall4" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-1.0927847e-08, 0, 1, 0, 1, 0, -0.25, 0, -4.371139e-08, -11.3, 0, -5.5)
-
-[node name="wall7" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, 10.55)
-
-[node name="wall8" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, 7)
-
-[node name="wall9" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, -0.5)
-
-[node name="wall_doorway2" parent="." instance=ExtResource("9_cegan")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, 3.2)
-
-[node name="door_B2" parent="." instance=ExtResource("10_82xsv")]
-transform = Transform3D(-0.8660253, 0, -0.5, 0, 1, 0, 0.5, 0, -0.8660253, 13.75, 0, 4)
-
-[node name="wall_orderwindow3" parent="." instance=ExtResource("4_w48qg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, -3.75)
-
-[node name="wall10" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, -7)
-
-[node name="wall11" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 13.75, 0, -10.75)
-
-[node name="wall12" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -13)
-
-[node name="wall13" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25, 0, -13)
-
-[node name="wall_window_closed3" parent="." instance=ExtResource("6_2cqfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 0, -13)
-
-[node name="wall14" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, -13)
-
-[node name="sophia" parent="." instance=ExtResource("11_efxa6")]
-transform = Transform3D(-5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, -5.9604645e-08, 17, 0, -14)
-
-[node name="SophiaSkin" parent="." instance=ExtResource("12_w48qg")]
-transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 18, 0, -11)
-
-[node name="wall3" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-1.0927847e-08, 0, 1, 0, 1, 0, -0.25, 0, -4.371139e-08, -11.25, 0, 11.9)
-
-[node name="wall_half2" parent="." instance=ExtResource("3_ycdy4")]
-transform = Transform3D(-2.1855694e-08, 0, 1, 0, 1, 0, -0.5, 0, -4.371139e-08, -11.25, 0, -12)
-
-[node name="wall_doorway3" parent="." instance=ExtResource("9_cegan")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -13)
-
-[node name="wall_window_closed2" parent="." instance=ExtResource("6_2cqfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -13)
-
-[node name="wall18" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0, -13)
-
-[node name="wall19" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.25, 0, -15)
-
-[node name="wall20" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.25, 0, -18.25)
-
-[node name="wall21" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.25, 0, -22)
-
-[node name="wall22" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -22)
-
-[node name="wall23" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 0, -22)
-
-[node name="wall_half3" parent="." instance=ExtResource("3_ycdy4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -22)
-
-[node name="wall24" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -20.25)
-
-[node name="wall25" parent="." instance=ExtResource("8_074og")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -17)
-
-[node name="wall_half4" parent="." instance=ExtResource("3_ycdy4")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -13.25)
-
-[node name="door_B3" parent="." instance=ExtResource("10_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8, 0, -13)
-
-[node name="road-intersection" parent="." instance=ExtResource("13_cegan")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-intersection"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-intersection/StaticBody3D"]
-shape = SubResource("BoxShape3D_d2t1y")
-
-[node name="road-straight2" parent="." instance=ExtResource("14_0cp0l")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 10)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight2/StaticBody3D"]
-shape = SubResource("BoxShape3D_gngh3")
-
-[node name="road-straight18" parent="." instance=ExtResource("14_0cp0l")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 5)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight18"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight18/StaticBody3D"]
-shape = SubResource("BoxShape3D_0cp0l")
-
-[node name="road-straight" parent="." instance=ExtResource("14_0cp0l")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 0)
-
-[node name="road-straight4" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -10, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight4/StaticBody3D"]
-shape = SubResource("BoxShape3D_0n3wm")
-
-[node name="road-straight5" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855696e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855696e-07, -5, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight5"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight5/StaticBody3D"]
-shape = SubResource("BoxShape3D_qnost")
-
-[node name="road-straight6" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 0, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight6"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight6/StaticBody3D"]
-shape = SubResource("BoxShape3D_wnkbs")
-
-[node name="road-straight7" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 5, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight7"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight7/StaticBody3D"]
-shape = SubResource("BoxShape3D_f6a44")
-
-[node name="road-straight8" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 10, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight8"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight8/StaticBody3D"]
-shape = SubResource("BoxShape3D_0cbny")
-
-[node name="road-straight9" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 15, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight9"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight9/StaticBody3D"]
-shape = SubResource("BoxShape3D_hrvbo")
-
-[node name="pavement2" parent="." instance=ExtResource("16_ryguw")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 15, 0, 3)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="pavement2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pavement2/StaticBody3D"]
-shape = SubResource("BoxShape3D_6iyjs")
-
-[node name="pavement3" parent="." instance=ExtResource("16_ryguw")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18, 0, 3)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="pavement3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pavement3/StaticBody3D"]
-shape = SubResource("BoxShape3D_4w656")
-
-[node name="pavement4" parent="." instance=ExtResource("16_ryguw")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 21, 0, 3)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="pavement4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pavement4/StaticBody3D"]
-shape = SubResource("BoxShape3D_e71vb")
-
-[node name="road-straight10" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 20, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight10"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight10/StaticBody3D"]
-shape = SubResource("BoxShape3D_uypp3")
-
-[node name="road-straight11" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 20)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-straight11"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-straight11/StaticBody3D"]
-shape = SubResource("BoxShape3D_abqjc")
-
-[node name="building-small-d" parent="." instance=ExtResource("17_d13ii")]
-transform = Transform3D(-9.655597e-07, 0, 9, 0, 9, 0, -9, 0, -9.655597e-07, -31, 0, -13)
-
-[node name="building-garage" parent="." instance=ExtResource("18_1u8w0")]
-transform = Transform3D(-20, 0, 1.9629454e-06, 0, 9, 0, -3.019916e-06, 0, -13, 7, 0, 32)
-
-[node name="road-straight12" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 25)
-
-[node name="road-straight12" parent="road-straight12" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.000001)
-
-[node name="road-straight12" parent="road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.000001)
-
-[node name="road-straight12" parent="road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.000001)
-
-[node name="road-straight12" parent="road-straight12/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.000001)
-
-[node name="road-straight12" parent="road-straight12/road-straight12/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0000007)
-
-[node name="road-straight12" parent="road-straight12/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0000007)
-
-[node name="road-straight12" parent="road-straight12/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0000007)
-
-[node name="road-straight13" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -20, 0, 15)
-
-[node name="kitchentable_A2" parent="." instance=ExtResource("17_lswn8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.75)
-
-[node name="kitchencounter_outercorner4" parent="." instance=ExtResource("19_0odxb")]
-transform = Transform3D(8.943651e-09, 0, 1, 0, 1, 0, -0.75, 0, 1.1924875e-08, 0, 0, 4)
-
-[node name="kitchencounter_outercorner3" parent="." instance=ExtResource("19_0odxb")]
-transform = Transform3D(-1, 0, -6.556708e-08, 0, 1, 0, 8.742275e-08, 0, -0.75, 0, 0, 2.5)
-
-[node name="kitchencounter_outercorner4" parent="kitchencounter_outercorner3" instance=ExtResource("19_0odxb")]
-transform = Transform3D(0.75, 0, -5.563627e-08, 0, 1, 0, 4.1727176e-08, 0, 1, 2.437501, 0, -11.416666)
-
-[node name="kitchencounter_outercorner3" parent="kitchencounter_outercorner3" instance=ExtResource("19_0odxb")]
-transform = Transform3D(-4.371136e-08, 0, 0.75, 0, 1, 0, -1, 0, -3.2783575e-08, 3.562501, 0, -11.416666)
-
-[node name="cuttingboard2" parent="." instance=ExtResource("19_a6jrf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
-
-[node name="plate2" parent="." instance=ExtResource("20_xuqvo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, 1)
-
-[node name="stove_single2" parent="." instance=ExtResource("21_qsp4k")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, -2)
-
-[node name="kitchencounter_innercorner_backsplash2" parent="." instance=ExtResource("22_kq58d")]
-transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, -9, 0, 7)
-
-[node name="kitchencounter_innercorner_backsplash3" parent="." instance=ExtResource("22_kq58d")]
-transform = Transform3D(-6.556708e-08, 0, 1, 0, 1, 0, -1.5, 0, -4.371139e-08, -9, 0, 5)
-
-[node name="ketchup2" parent="." instance=ExtResource("23_seu75")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1, 7.5)
-
-[node name="fridge_B2" parent="." instance=ExtResource("24_htxhm")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, -10)
-
-[node name="jar_A_small2" parent="." instance=ExtResource("25_jq2sk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1, 7)
-
-[node name="papertowel2" parent="." instance=ExtResource("26_4k2k6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, 0)
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 8)
-material_override = SubResource("StandardMaterial3D_blkrb")
-mesh = SubResource("PlaneMesh_abqjc")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -8)
-material_override = SubResource("StandardMaterial3D_6iyjs")
-mesh = SubResource("PlaneMesh_4w656")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D3"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, -9)
-material_override = SubResource("StandardMaterial3D_6iyjs")
-mesh = SubResource("PlaneMesh_4w656")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 30)
-material_override = SubResource("StandardMaterial3D_e71vb")
-mesh = SubResource("PlaneMesh_rnkwl")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D4"]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -35, 0, -35)
-material_override = SubResource("StandardMaterial3D_e71vb")
-mesh = SubResource("PlaneMesh_rnkwl")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D4/MeshInstance3D4"]
-transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -40, 0, 0)
-material_override = SubResource("StandardMaterial3D_e71vb")
-mesh = SubResource("PlaneMesh_rnkwl")
-
-[node name="road-corner" parent="MeshInstance3D4/MeshInstance3D4" instance=ExtResource("29_4lmeg")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -49.999992, 0, 15.000002)
-
-[node name="table_round_A_small_decorated2" parent="." instance=ExtResource("30_0cp0l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8)
-
-[node name="table_round_A_small2" parent="." instance=ExtResource("31_d2t1y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
-
-[node name="shelf_papertowel_decorated2" parent="." instance=ExtResource("32_gngh3")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 2, 5)
-
-[node name="extractorhood2" parent="." instance=ExtResource("33_0n3wm")]
-transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, -11, 0, -2)
-
-[node name="chair_A2" parent="." instance=ExtResource("34_qnost")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
-
-[node name="chair_A3" parent="." instance=ExtResource("34_qnost")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0, -2)
-
-[node name="chair_stool2" parent="." instance=ExtResource("35_wnkbs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -8)
-
-[node name="chair_A4" parent="." instance=ExtResource("34_qnost")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, -7)
-
-[node name="building-small-a" parent="." instance=ExtResource("36_f6a44")]
-transform = Transform3D(-3.934025e-07, 0, 9, 0, 9, 0, -9, 0, -3.934025e-07, -31, 0, -5)
-
-[node name="building-small-d2" parent="." instance=ExtResource("17_d13ii")]
-transform = Transform3D(-3.934025e-07, 0, 9, 0, 9, 0, -9, 0, -3.934025e-07, -31, 0, 3)
-
-[node name="grass-trees" parent="." instance=ExtResource("37_0cbny")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -25, 0, 9)
-
-[node name="grass-trees" parent="grass-trees" instance=ExtResource("37_0cbny")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.666666, 0, 0)
-
-[node name="grass-trees-tall" parent="." instance=ExtResource("38_hrvbo")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -23, 0, -19)
-
-[node name="grass-trees-tall2" parent="." instance=ExtResource("38_hrvbo")]
-transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, -6, 0, 24)
-
-[node name="grass-trees-tall3" parent="grass-trees-tall2" instance=ExtResource("38_hrvbo")]
-transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -5.399997, 0, -2.599999)
-
-[node name="grass-trees2" parent="." instance=ExtResource("37_0cbny")]
-transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 20, 0, 21)
-
-[node name="grass-trees3" parent="grass-trees2" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841856e-07, 0, 1, 0, -2.3841856e-07, 0, 1, 2.3333359, 0, -0.99967146)
-
-[node name="road-straight14" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-7.1525574e-07, 0, -5, 0, 5, 0, 5, 0, -7.1525574e-07, -25, 0, 15)
-
-[node name="road-straight14" parent="road-straight14" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, -9.933976e-08, 0, 1, 0, 9.933976e-08, 0, 1, -1.9073486e-06, 0, 1)
-
-[node name="road-straight14" parent="road-straight14/road-straight14" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, -9.933976e-08, 0, 1, 0, 9.933976e-08, 0, 1, -1.9073486e-06, 0, 1)
-
-[node name="road-straight14" parent="road-straight14/road-straight14/road-straight14" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, -9.9339765e-08, 0, 1, 0, 9.9339765e-08, 0, 1, -1.9073486e-06, 0, 1)
-
-[node name="road-straight15" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -10, 0, 45)
-
-[node name="road-straight15" parent="road-straight15" instance=ExtResource("14_82xsv")]
-transform = Transform3D(-1, 0, -1.5099582e-07, 0, 1, 0, 1.5099582e-07, 0, -1, 9.536743e-07, 0, 1.0000001)
-
-[node name="road-straight15" parent="road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 1.9073486e-06, 0, -0.99999994)
-
-[node name="road-straight15" parent="road-straight15/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
-transform = Transform3D(-1, 0, -1.5099585e-07, 0, 1, 0, 1.5099585e-07, 0, -1, 1.9073486e-06, 0, 1.0000001)
-
-[node name="road-straight15" parent="road-straight15/road-straight15/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
-transform = Transform3D(-1, 0, -1.5099585e-07, 0, 1, 0, 1.5099585e-07, 0, -1, 1.9073486e-06, 0, -0.99999994)
-
-[node name="road-straight15" parent="road-straight15/road-straight15/road-straight15/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
-transform = Transform3D(-1, 0, -1.5099579e-07, 0, 1, 0, 1.5099579e-07, 0, -1, 0, 0, 1.0000001)
-
-[node name="road-straight15" parent="road-straight15/road-straight15/road-straight15/road-straight15/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
-transform = Transform3D(-1, 0, -1.5099579e-07, 0, 1, 0, 1.5099579e-07, 0, -1, 0, 0, -1)
-
-[node name="road-corner" parent="." instance=ExtResource("29_4lmeg")]
-transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 25, 0, 45)
-
-[node name="road-straight16" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 25, 0, 40)
-
-[node name="road-straight16" parent="road-straight16" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="road-straight16" parent="road-straight16/road-straight16" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="road-straight16" parent="road-straight16/road-straight16/road-straight16" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="road-straight16" parent="road-straight16/road-straight16/road-straight16/road-straight16" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
-
-[node name="road-split" parent="." instance=ExtResource("39_uypp3")]
-transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 25, 0, 15)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="road-split"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="road-split/StaticBody3D"]
-shape = SubResource("BoxShape3D_blkrb")
-
-[node name="road-straight17" parent="." instance=ExtResource("14_82xsv")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 25, 0, 10)
-
-[node name="road-straight17" parent="road-straight17" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
-
-[node name="road-straight17" parent="road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.9999996)
-
-[node name="road-straight17" parent="road-straight17/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
-
-[node name="road-straight17" parent="road-straight17/road-straight17/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
-
-[node name="road-straight17" parent="road-straight17/road-straight17/road-straight17/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
-
-[node name="road-straight17" parent="road-straight17/road-straight17/road-straight17/road-straight17/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
-
-[node name="grass-trees3" parent="." instance=ExtResource("37_0cbny")]
-transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, -15, 0, 50)
-
-[node name="grass-trees3" parent="grass-trees3" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
-
-[node name="grass-trees3" parent="grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
-
-[node name="grass-trees3" parent="grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
-
-[node name="grass-trees3" parent="grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
-
-[node name="grass-trees3" parent="grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
-
-[node name="grass-trees3" parent="grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
-
-[node name="grass-trees3" parent="grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
-
-[node name="grass-trees3" parent="grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
-transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
-
-[node name="DriveThroughPoints" type="Node3D" parent="."]
-
-[node name="WP_2" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.25, 0, 10)
-
-[node name="WP_curve" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, 0, 12)
-
-[node name="WP_4" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 14)
-
-[node name="WP_5" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 14.5)
-
-[node name="WP_6" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 14.5)
-
-[node name="WP_7" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 14.5)
-
-[node name="WP_8" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 14.5)
-
-[node name="WP_9" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 14.5)
-
-[node name="WP_10" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 14.5)
-
-[node name="WP_11" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 14.5)
-
-[node name="WP_12" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 14.5)
-
-[node name="WP_13" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 14.5)
-
-[node name="WP_14" type="Marker3D" parent="DriveThroughPoints"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 14.5)
-
-[node name="Node3D" parent="." instance=ExtResource("2_4lmeg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -11.3, 2, 10)
-
-[node name="Node3D2" parent="." instance=ExtResource("2_4lmeg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -11.3, 2, 1)
-
-[node name="Node3D3" parent="." instance=ExtResource("2_4lmeg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -11.3, 2, -8)
-
-[node name="Node3D4" parent="." instance=ExtResource("2_4lmeg")]
-transform = Transform3D(-4.371139e-08, 0, 1.1, 0, 1, 0, -1, 0, -4.8082526e-08, 2, 2, 12)
-
-[node name="WallDoorway" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
-mesh = ExtResource("40_0cp0l")
-
-[node name="DoorB" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 0, 12)
-mesh = ExtResource("41_d2t1y")
-
-[node name="Node3D5" parent="." instance=ExtResource("2_4lmeg")]
-transform = Transform3D(-4.371139e-08, 0, 1.7, 0, 1, 0, -1, 0, -7.430936e-08, 12, 2, 12)
-
-[node name="Car_Path" type="Path3D" parent="."]
+[node name="Car_Path" type="Path3D" parent="GameplayRoot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, 0, 6)
 curve = SubResource("Curve3D_gngh3")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Car_Path"]
+[node name="PathFollow3D" type="PathFollow3D" parent="GameplayRoot/Car_Path"]
 transform = Transform3D(0.99999684, 0, 8.74225e-08, 0, 1, 0, -8.74225e-08, 0, 0.99999684, 0, 0, 0)
 use_model_front = true
 script = ExtResource("42_d2t1y")
 
-[node name="car" parent="Car_Path/PathFollow3D" instance=ExtResource("39_h8e4i")]
+[node name="car" parent="GameplayRoot/Car_Path/PathFollow3D" instance=ExtResource("39_h8e4i")]
 
-[node name="Customer_Path" type="Path3D" parent="."]
+[node name="Customer_Path" type="Path3D" parent="GameplayRoot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 3)
 curve = SubResource("Curve3D_rnkwl")
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Customer_Path"]
+[node name="PathFollow3D" type="PathFollow3D" parent="GameplayRoot/Customer_Path"]
 transform = Transform3D(-0.013347031, 1.4256676e-05, -0.9999082, -4.547461e-13, 1, 1.42579065e-05, 0.9999082, 1.903022e-07, -0.013347031, 0.04877472, 0.012285233, 0.018571138)
 use_model_front = true
 script = ExtResource("44_0n3wm")
 
-[node name="Walking_ani" parent="Customer_Path/PathFollow3D" instance=ExtResource("44_uypp3")]
+[node name="Walking_ani" parent="GameplayRoot/Customer_Path/PathFollow3D" instance=ExtResource("44_uypp3")]
 transform = Transform3D(0.29997414, -1.3210277e-13, 0.0040041716, 5.709124e-08, 0.30000004, -4.2770034e-06, -0.0040041716, 4.2773495e-06, 0.29997414, 0.99534225, -0.012299998, 1.0355816)
 script = ExtResource("45_hrvbo")
 
-[node name="Area3D" type="Area3D" parent="Customer_Path/PathFollow3D/Walking_ani"]
+[node name="Area3D" type="Area3D" parent="GameplayRoot/Customer_Path/PathFollow3D/Walking_ani"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Customer_Path/PathFollow3D/Walking_ani/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Customer_Path/PathFollow3D/Walking_ani/Area3D"]
 
-[node name="Main_Character" parent="." instance=ExtResource("44_uypp3")]
+[node name="Main_Character" parent="GameplayRoot" instance=ExtResource("44_uypp3")]
 transform = Transform3D(-1.3113417e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.3113417e-08, 21, 0, -5)
 script = ExtResource("45_0n3wm")
 
-[node name="CameraPivot" type="Node3D" parent="Main_Character"]
+[node name="CameraPivot" type="Node3D" parent="GameplayRoot/Main_Character"]
 
-[node name="Camera3D" type="Camera3D" parent="Main_Character/CameraPivot"]
+[node name="Camera3D" type="Camera3D" parent="GameplayRoot/Main_Character/CameraPivot"]
 transform = Transform3D(-3.333333, 3.7711136e-08, 2.9637414e-07, 1.1313342e-07, 3.2197526, 0.86273015, -2.7651504e-07, 0.86273015, -3.2197526, 0, 16.666664, -16.666664)
 
-[node name="HandSlot" type="Node3D" parent="Main_Character"]
+[node name="HandSlot" type="Node3D" parent="GameplayRoot/Main_Character"]
 transform = Transform3D(0.99999976, 0, 3.5527137e-15, 0, 0.99999976, 0, -3.5527137e-15, 0, 0.99999976, -2, 3, 0)
 
-[node name="LemonTea" parent="." instance=ExtResource("46_f6a44")]
+[node name="LemonTea" parent="GameplayRoot" instance=ExtResource("46_f6a44")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -9.4, 1.35, -6)
 script = ExtResource("48_uypp3")
 
-[node name="Area3D" type="Area3D" parent="LemonTea"]
+[node name="Area3D" type="Area3D" parent="GameplayRoot/LemonTea"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LemonTea/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/LemonTea/Area3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="LemonTea"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GameplayRoot/LemonTea"]
 
-[node name="KitchentableA" type="MeshInstance3D" parent="."]
+[node name="Environment" type="Node3D" parent="GameplayRoot"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GameplayRoot/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = SubResource("PlaneMesh_0odxb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GameplayRoot/Environment/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -17.8)
+mesh = SubResource("PlaneMesh_lswn8")
+
+[node name="Node3D" parent="GameplayRoot/Environment/MeshInstance3D" instance=ExtResource("2_4lmeg")]
+transform = Transform3D(0.0088312235, 0, 1.5999377, 0, 1, 0, -0.999961, 0, 0.014129958, -7.5, 2, 12.243)
+
+[node name="wall_half5" parent="GameplayRoot/Environment" instance=ExtResource("3_ycdy4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.25, 0, -20)
+
+[node name="wall6" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(7.450581e-09, 0, 1, 0, 1, 0, -0.25, 0, 2.9802322e-08, -11.3, 0, 3.5)
+
+[node name="wall4" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-1.0927847e-08, 0, 1, 0, 1, 0, -0.25, 0, -4.371139e-08, -11.3, 0, -5.5)
+
+[node name="wall7" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, 10.55)
+
+[node name="wall8" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, 7)
+
+[node name="wall9" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, -0.5)
+
+[node name="wall_doorway2" parent="GameplayRoot/Environment" instance=ExtResource("9_cegan")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, 3.2)
+
+[node name="door_B2" parent="GameplayRoot/Environment" instance=ExtResource("10_82xsv")]
+transform = Transform3D(-0.8660253, 0, -0.5, 0, 1, 0, 0.5, 0, -0.8660253, 13.75, 0, 4)
+
+[node name="wall_orderwindow3" parent="GameplayRoot/Environment" instance=ExtResource("4_w48qg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, -3.75)
+
+[node name="wall10" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.75, 0, -7)
+
+[node name="wall11" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(0, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 0, 13.75, 0, -10.75)
+
+[node name="wall12" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -13)
+
+[node name="wall13" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.25, 0, -13)
+
+[node name="wall_window_closed3" parent="GameplayRoot/Environment" instance=ExtResource("6_2cqfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 0, -13)
+
+[node name="wall14" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 1, 0, -13)
+
+[node name="sophia" parent="GameplayRoot/Environment" instance=ExtResource("11_efxa6")]
+transform = Transform3D(-5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, -5.9604645e-08, 17, 0, -14)
+
+[node name="SophiaSkin" parent="GameplayRoot/Environment" instance=ExtResource("12_w48qg")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 18, 0, -11)
+
+[node name="wall3" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-1.0927847e-08, 0, 1, 0, 1, 0, -0.25, 0, -4.371139e-08, -11.25, 0, 11.9)
+
+[node name="wall_half2" parent="GameplayRoot/Environment" instance=ExtResource("3_ycdy4")]
+transform = Transform3D(-2.1855694e-08, 0, 1, 0, 1, 0, -0.5, 0, -4.371139e-08, -11.25, 0, -12)
+
+[node name="wall_doorway3" parent="GameplayRoot/Environment" instance=ExtResource("9_cegan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -13)
+
+[node name="wall_window_closed2" parent="GameplayRoot/Environment" instance=ExtResource("6_2cqfq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -13)
+
+[node name="wall18" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0, -13)
+
+[node name="wall19" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.25, 0, -15)
+
+[node name="wall20" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.25, 0, -18.25)
+
+[node name="wall21" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.25, 0, -22)
+
+[node name="wall22" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -22)
+
+[node name="wall23" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 0, -22)
+
+[node name="wall_half3" parent="GameplayRoot/Environment" instance=ExtResource("3_ycdy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -22)
+
+[node name="wall24" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -20.25)
+
+[node name="wall25" parent="GameplayRoot/Environment" instance=ExtResource("8_074og")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -17)
+
+[node name="wall_half4" parent="GameplayRoot/Environment" instance=ExtResource("3_ycdy4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1, 0, -13.25)
+
+[node name="door_B3" parent="GameplayRoot/Environment" instance=ExtResource("10_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8, 0, -13)
+
+[node name="road-intersection" parent="GameplayRoot/Environment" instance=ExtResource("13_cegan")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-intersection"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-intersection/StaticBody3D"]
+shape = SubResource("BoxShape3D_d2t1y")
+
+[node name="road-straight2" parent="GameplayRoot/Environment" instance=ExtResource("14_0cp0l")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 10)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight2/StaticBody3D"]
+shape = SubResource("BoxShape3D_gngh3")
+
+[node name="road-straight18" parent="GameplayRoot/Environment" instance=ExtResource("14_0cp0l")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight18/StaticBody3D"]
+shape = SubResource("BoxShape3D_0cp0l")
+
+[node name="road-straight" parent="GameplayRoot/Environment" instance=ExtResource("14_0cp0l")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 0)
+
+[node name="road-straight4" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -10, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight4/StaticBody3D"]
+shape = SubResource("BoxShape3D_0n3wm")
+
+[node name="road-straight5" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855696e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855696e-07, -5, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight5/StaticBody3D"]
+shape = SubResource("BoxShape3D_qnost")
+
+[node name="road-straight6" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 0, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight6/StaticBody3D"]
+shape = SubResource("BoxShape3D_wnkbs")
+
+[node name="road-straight7" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 5, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight7/StaticBody3D"]
+shape = SubResource("BoxShape3D_f6a44")
+
+[node name="road-straight8" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 10, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight8/StaticBody3D"]
+shape = SubResource("BoxShape3D_0cbny")
+
+[node name="road-straight9" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 15, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight9/StaticBody3D"]
+shape = SubResource("BoxShape3D_hrvbo")
+
+[node name="pavement2" parent="GameplayRoot/Environment" instance=ExtResource("16_ryguw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 15, 0, 3)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/pavement2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/pavement2/StaticBody3D"]
+shape = SubResource("BoxShape3D_6iyjs")
+
+[node name="pavement3" parent="GameplayRoot/Environment" instance=ExtResource("16_ryguw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 18, 0, 3)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/pavement3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/pavement3/StaticBody3D"]
+shape = SubResource("BoxShape3D_4w656")
+
+[node name="pavement4" parent="GameplayRoot/Environment" instance=ExtResource("16_ryguw")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 21, 0, 3)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/pavement4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/pavement4/StaticBody3D"]
+shape = SubResource("BoxShape3D_e71vb")
+
+[node name="road-straight10" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 20, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight10/StaticBody3D"]
+shape = SubResource("BoxShape3D_uypp3")
+
+[node name="road-straight11" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 20)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-straight11"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-straight11/StaticBody3D"]
+shape = SubResource("BoxShape3D_abqjc")
+
+[node name="building-small-d" parent="GameplayRoot/Environment" instance=ExtResource("17_d13ii")]
+transform = Transform3D(-9.655597e-07, 0, 9, 0, 9, 0, -9, 0, -9.655597e-07, -31, 0, -13)
+
+[node name="building-garage" parent="GameplayRoot/Environment" instance=ExtResource("18_1u8w0")]
+transform = Transform3D(-20, 0, 1.9629454e-06, 0, 9, 0, -3.019916e-06, 0, -13, 7, 0, 32)
+
+[node name="road-straight12" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -15, 0, 25)
+
+[node name="road-straight12" parent="GameplayRoot/Environment/road-straight12" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.000001)
+
+[node name="road-straight12" parent="GameplayRoot/Environment/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.000001)
+
+[node name="road-straight12" parent="GameplayRoot/Environment/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.000001)
+
+[node name="road-straight12" parent="GameplayRoot/Environment/road-straight12/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.000001)
+
+[node name="road-straight12" parent="GameplayRoot/Environment/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0000007)
+
+[node name="road-straight12" parent="GameplayRoot/Environment/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0000007)
+
+[node name="road-straight12" parent="GameplayRoot/Environment/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12/road-straight12" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.0000007)
+
+[node name="road-straight13" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -20, 0, 15)
+
+[node name="kitchentable_A2" parent="GameplayRoot/Environment" instance=ExtResource("17_lswn8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.75)
+
+[node name="kitchencounter_outercorner4" parent="GameplayRoot/Environment" instance=ExtResource("19_0odxb")]
+transform = Transform3D(8.943651e-09, 0, 1, 0, 1, 0, -0.75, 0, 1.1924875e-08, 0, 0, 4)
+
+[node name="kitchencounter_outercorner3" parent="GameplayRoot/Environment" instance=ExtResource("19_0odxb")]
+transform = Transform3D(-1, 0, -6.556708e-08, 0, 1, 0, 8.742275e-08, 0, -0.75, 0, 0, 2.5)
+
+[node name="kitchencounter_outercorner4" parent="GameplayRoot/Environment/kitchencounter_outercorner3" instance=ExtResource("19_0odxb")]
+transform = Transform3D(0.75, 0, -5.563627e-08, 0, 1, 0, 4.1727176e-08, 0, 1, 2.437501, 0, -11.416666)
+
+[node name="kitchencounter_outercorner3" parent="GameplayRoot/Environment/kitchencounter_outercorner3" instance=ExtResource("19_0odxb")]
+transform = Transform3D(-4.371136e-08, 0, 0.75, 0, 1, 0, -1, 0, -3.2783575e-08, 3.562501, 0, -11.416666)
+
+[node name="cuttingboard2" parent="GameplayRoot/Environment" instance=ExtResource("19_a6jrf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="plate2" parent="GameplayRoot/Environment" instance=ExtResource("20_xuqvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, 1)
+
+[node name="stove_single2" parent="GameplayRoot/Environment" instance=ExtResource("21_qsp4k")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, -2)
+
+[node name="kitchencounter_innercorner_backsplash2" parent="GameplayRoot/Environment" instance=ExtResource("22_kq58d")]
+transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, -9, 0, 7)
+
+[node name="kitchencounter_innercorner_backsplash3" parent="GameplayRoot/Environment" instance=ExtResource("22_kq58d")]
+transform = Transform3D(-6.556708e-08, 0, 1, 0, 1, 0, -1.5, 0, -4.371139e-08, -9, 0, 5)
+
+[node name="ketchup2" parent="GameplayRoot/Environment" instance=ExtResource("23_seu75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1, 7.5)
+
+[node name="fridge_B2" parent="GameplayRoot/Environment" instance=ExtResource("24_htxhm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -10, 0, -10)
+
+[node name="jar_A_small2" parent="GameplayRoot/Environment" instance=ExtResource("25_jq2sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 1, 7)
+
+[node name="papertowel2" parent="GameplayRoot/Environment" instance=ExtResource("26_4k2k6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1, 0)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GameplayRoot/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 8)
+material_override = SubResource("StandardMaterial3D_blkrb")
+mesh = SubResource("PlaneMesh_abqjc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GameplayRoot/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -8)
+material_override = SubResource("StandardMaterial3D_6iyjs")
+mesh = SubResource("PlaneMesh_4w656")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GameplayRoot/Environment/MeshInstance3D3"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, -9)
+material_override = SubResource("StandardMaterial3D_6iyjs")
+mesh = SubResource("PlaneMesh_4w656")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="GameplayRoot/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 30)
+material_override = SubResource("StandardMaterial3D_e71vb")
+mesh = SubResource("PlaneMesh_rnkwl")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="GameplayRoot/Environment/MeshInstance3D4"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -35, 0, -35)
+material_override = SubResource("StandardMaterial3D_e71vb")
+mesh = SubResource("PlaneMesh_rnkwl")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="GameplayRoot/Environment/MeshInstance3D4/MeshInstance3D4"]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -40, 0, 0)
+material_override = SubResource("StandardMaterial3D_e71vb")
+mesh = SubResource("PlaneMesh_rnkwl")
+
+[node name="road-corner" parent="GameplayRoot/Environment/MeshInstance3D4/MeshInstance3D4" instance=ExtResource("29_4lmeg")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -49.999992, 0, 15.000002)
+
+[node name="table_round_A_small_decorated2" parent="GameplayRoot/Environment" instance=ExtResource("30_0cp0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8)
+
+[node name="table_round_A_small2" parent="GameplayRoot/Environment" instance=ExtResource("31_d2t1y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
+
+[node name="shelf_papertowel_decorated2" parent="GameplayRoot/Environment" instance=ExtResource("32_gngh3")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 2, 5)
+
+[node name="extractorhood2" parent="GameplayRoot/Environment" instance=ExtResource("33_0n3wm")]
+transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, -11, 0, -2)
+
+[node name="chair_A2" parent="GameplayRoot/Environment" instance=ExtResource("34_qnost")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+
+[node name="chair_A3" parent="GameplayRoot/Environment" instance=ExtResource("34_qnost")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 6, 0, -2)
+
+[node name="chair_stool2" parent="GameplayRoot/Environment" instance=ExtResource("35_wnkbs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -8)
+
+[node name="chair_A4" parent="GameplayRoot/Environment" instance=ExtResource("34_qnost")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 0, -7)
+
+[node name="building-small-a" parent="GameplayRoot/Environment" instance=ExtResource("36_f6a44")]
+transform = Transform3D(-3.934025e-07, 0, 9, 0, 9, 0, -9, 0, -3.934025e-07, -31, 0, -5)
+
+[node name="building-small-d2" parent="GameplayRoot/Environment" instance=ExtResource("17_d13ii")]
+transform = Transform3D(-3.934025e-07, 0, 9, 0, 9, 0, -9, 0, -3.934025e-07, -31, 0, 3)
+
+[node name="grass-trees" parent="GameplayRoot/Environment" instance=ExtResource("37_0cbny")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -25, 0, 9)
+
+[node name="grass-trees" parent="GameplayRoot/Environment/grass-trees" instance=ExtResource("37_0cbny")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.666666, 0, 0)
+
+[node name="grass-trees-tall" parent="GameplayRoot/Environment" instance=ExtResource("38_hrvbo")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -23, 0, -19)
+
+[node name="grass-trees-tall2" parent="GameplayRoot/Environment" instance=ExtResource("38_hrvbo")]
+transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, -6, 0, 24)
+
+[node name="grass-trees-tall3" parent="GameplayRoot/Environment/grass-trees-tall2" instance=ExtResource("38_hrvbo")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, -5.399997, 0, -2.599999)
+
+[node name="grass-trees2" parent="GameplayRoot/Environment" instance=ExtResource("37_0cbny")]
+transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 20, 0, 21)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees2" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841856e-07, 0, 1, 0, -2.3841856e-07, 0, 1, 2.3333359, 0, -0.99967146)
+
+[node name="road-straight14" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-7.1525574e-07, 0, -5, 0, 5, 0, 5, 0, -7.1525574e-07, -25, 0, 15)
+
+[node name="road-straight14" parent="GameplayRoot/Environment/road-straight14" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, -9.933976e-08, 0, 1, 0, 9.933976e-08, 0, 1, -1.9073486e-06, 0, 1)
+
+[node name="road-straight14" parent="GameplayRoot/Environment/road-straight14/road-straight14" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, -9.933976e-08, 0, 1, 0, 9.933976e-08, 0, 1, -1.9073486e-06, 0, 1)
+
+[node name="road-straight14" parent="GameplayRoot/Environment/road-straight14/road-straight14/road-straight14" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, -9.9339765e-08, 0, 1, 0, 9.9339765e-08, 0, 1, -1.9073486e-06, 0, 1)
+
+[node name="road-straight15" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, -10, 0, 45)
+
+[node name="road-straight15" parent="GameplayRoot/Environment/road-straight15" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-1, 0, -1.5099582e-07, 0, 1, 0, 1.5099582e-07, 0, -1, 9.536743e-07, 0, 1.0000001)
+
+[node name="road-straight15" parent="GameplayRoot/Environment/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 1.9073486e-06, 0, -0.99999994)
+
+[node name="road-straight15" parent="GameplayRoot/Environment/road-straight15/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-1, 0, -1.5099585e-07, 0, 1, 0, 1.5099585e-07, 0, -1, 1.9073486e-06, 0, 1.0000001)
+
+[node name="road-straight15" parent="GameplayRoot/Environment/road-straight15/road-straight15/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-1, 0, -1.5099585e-07, 0, 1, 0, 1.5099585e-07, 0, -1, 1.9073486e-06, 0, -0.99999994)
+
+[node name="road-straight15" parent="GameplayRoot/Environment/road-straight15/road-straight15/road-straight15/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-1, 0, -1.5099579e-07, 0, 1, 0, 1.5099579e-07, 0, -1, 0, 0, 1.0000001)
+
+[node name="road-straight15" parent="GameplayRoot/Environment/road-straight15/road-straight15/road-straight15/road-straight15/road-straight15/road-straight15" instance=ExtResource("14_82xsv")]
+transform = Transform3D(-1, 0, -1.5099579e-07, 0, 1, 0, 1.5099579e-07, 0, -1, 0, 0, -1)
+
+[node name="road-corner" parent="GameplayRoot/Environment" instance=ExtResource("29_4lmeg")]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 25, 0, 45)
+
+[node name="road-straight16" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 25, 0, 40)
+
+[node name="road-straight16" parent="GameplayRoot/Environment/road-straight16" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="road-straight16" parent="GameplayRoot/Environment/road-straight16/road-straight16" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="road-straight16" parent="GameplayRoot/Environment/road-straight16/road-straight16/road-straight16" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="road-straight16" parent="GameplayRoot/Environment/road-straight16/road-straight16/road-straight16/road-straight16" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="road-split" parent="GameplayRoot/Environment" instance=ExtResource("39_uypp3")]
+transform = Transform3D(-2.1855695e-07, 0, -5, 0, 5, 0, 5, 0, -2.1855695e-07, 25, 0, 15)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GameplayRoot/Environment/road-split"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GameplayRoot/Environment/road-split/StaticBody3D"]
+shape = SubResource("BoxShape3D_blkrb")
+
+[node name="road-straight17" parent="GameplayRoot/Environment" instance=ExtResource("14_82xsv")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 25, 0, 10)
+
+[node name="road-straight17" parent="GameplayRoot/Environment/road-straight17" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
+
+[node name="road-straight17" parent="GameplayRoot/Environment/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.9999996)
+
+[node name="road-straight17" parent="GameplayRoot/Environment/road-straight17/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
+
+[node name="road-straight17" parent="GameplayRoot/Environment/road-straight17/road-straight17/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
+
+[node name="road-straight17" parent="GameplayRoot/Environment/road-straight17/road-straight17/road-straight17/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
+
+[node name="road-straight17" parent="GameplayRoot/Environment/road-straight17/road-straight17/road-straight17/road-straight17/road-straight17/road-straight17" instance=ExtResource("14_82xsv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.99999964)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment" instance=ExtResource("37_0cbny")]
+transform = Transform3D(-5, 0, -7.54979e-07, 0, 5, 0, 7.54979e-07, 0, -5, -15, 0, 50)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees3" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
+
+[node name="grass-trees3" parent="GameplayRoot/Environment/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3/grass-trees3" instance=ExtResource("37_0cbny")]
+transform = Transform3D(1, 0, 2.3841858e-07, 0, 1, 0, -2.3841858e-07, 0, 1, -0.9999926, 0, 2.861023e-06)
+
+[node name="DriveThroughPoints" type="Node3D" parent="GameplayRoot/Environment"]
+
+[node name="WP_2" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.25, 0, 10)
+
+[node name="WP_curve" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, 0, 12)
+
+[node name="WP_4" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 14)
+
+[node name="WP_5" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 14.5)
+
+[node name="WP_6" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 14.5)
+
+[node name="WP_7" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 14.5)
+
+[node name="WP_8" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 14.5)
+
+[node name="WP_9" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 14.5)
+
+[node name="WP_10" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 14.5)
+
+[node name="WP_11" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 14.5)
+
+[node name="WP_12" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 14.5)
+
+[node name="WP_13" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 14.5)
+
+[node name="WP_14" type="Marker3D" parent="GameplayRoot/Environment/DriveThroughPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 14.5)
+
+[node name="Node3D" parent="GameplayRoot/Environment" instance=ExtResource("2_4lmeg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -11.3, 2, 10)
+
+[node name="Node3D2" parent="GameplayRoot/Environment" instance=ExtResource("2_4lmeg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -11.3, 2, 1)
+
+[node name="Node3D3" parent="GameplayRoot/Environment" instance=ExtResource("2_4lmeg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, -11.3, 2, -8)
+
+[node name="Node3D4" parent="GameplayRoot/Environment" instance=ExtResource("2_4lmeg")]
+transform = Transform3D(-4.371139e-08, 0, 1.1, 0, 1, 0, -1, 0, -4.8082526e-08, 2, 2, 12)
+
+[node name="WallDoorway" type="MeshInstance3D" parent="GameplayRoot/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
+mesh = ExtResource("40_0cp0l")
+
+[node name="DoorB" type="MeshInstance3D" parent="GameplayRoot/Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, 0, 12)
+mesh = ExtResource("41_d2t1y")
+
+[node name="Node3D5" parent="GameplayRoot/Environment" instance=ExtResource("2_4lmeg")]
+transform = Transform3D(-4.371139e-08, 0, 1.7, 0, 1, 0, -1, 0, -7.430936e-08, 12, 2, 12)
+
+[node name="KitchentableA" type="MeshInstance3D" parent="GameplayRoot/Environment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
 mesh = ExtResource("47_0cbny")
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("48_hrvbo")]
+[node name="Sketchfab_Scene" parent="GameplayRoot/Environment" instance=ExtResource("48_hrvbo")]
 transform = Transform3D(-2, 0, 2.3841858e-07, 0, 2, 0, -2.3841858e-07, 0, -2, -10, 1.75, -6)

@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch1h66gjwp0q7"
-path="res://.godot/imported/Rice_cuc_2_ready_Bake1_PBR StoA_Roughness.png-f3c3c4368803db519bd52a87af917a3e.ctex"
+uid="uid://b3ryldxwcba4u"
+path="res://.godot/imported/Hang.png-bc798524d8254e4da342d1cb13becc29.ctex"
 metadata={
 "vram_texture": false
-}
-generator_parameters={
-"md5": "b9493e4f886edf860b3f340d27f68df4"
 }
 
 [deps]
 
-source_file="res://Rice_cuc_2_ready_Bake1_PBR StoA_Roughness.png"
-dest_files=["res://.godot/imported/Rice_cuc_2_ready_Bake1_PBR StoA_Roughness.png-f3c3c4368803db519bd52a87af917a3e.ctex"]
+source_file="res://Hang.png"
+dest_files=["res://.godot/imported/Hang.png-bc798524d8254e4da342d1cb13becc29.ctex"]
 
 [params]
 
@@ -26,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

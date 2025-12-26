@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t7pdnj6uydpp"
-path="res://.godot/imported/Rice___opt__aboutcom__coeus__resources__content_migration__serious_.jpg-430662eeb6ac0fc6a628e334d9b91087.ctex"
+uid="uid://cckf8uffwj4es"
+path="res://.godot/imported/gear.png-2e4d26ff984e755d5bb7deacc0f26541.ctex"
 metadata={
 "vram_texture": false
-}
-generator_parameters={
-"md5": "b61410d4acf3e17d42bcfe2b63fe7ca8"
 }
 
 [deps]
 
-source_file="res://Rice___opt__aboutcom__coeus__resources__content_migration__serious_.jpg"
-dest_files=["res://.godot/imported/Rice___opt__aboutcom__coeus__resources__content_migration__serious_.jpg-430662eeb6ac0fc6a628e334d9b91087.ctex"]
+source_file="res://image/gear.png"
+dest_files=["res://.godot/imported/gear.png-2e4d26ff984e755d5bb7deacc0f26541.ctex"]
 
 [params]
 
@@ -26,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

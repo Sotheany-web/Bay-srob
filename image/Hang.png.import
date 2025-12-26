@@ -2,19 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7qaugw01bylr"
-path="res://.godot/imported/Rice_Porcelain_basecolor.jpg-31792532dd0ff7725d9de3fcf35b342d.ctex"
+uid="uid://b7flaebo340n0"
+path="res://.godot/imported/Hang.png-ddafd757cb83651e71f7c637a3383065.ctex"
 metadata={
 "vram_texture": false
-}
-generator_parameters={
-"md5": "8fead81c89136ae79e128d456ab85d2d"
 }
 
 [deps]
 
-source_file="res://Rice_Porcelain_basecolor.jpg"
-dest_files=["res://.godot/imported/Rice_Porcelain_basecolor.jpg-31792532dd0ff7725d9de3fcf35b342d.ctex"]
+source_file="res://image/Hang.png"
+dest_files=["res://.godot/imported/Hang.png-ddafd757cb83651e71f7c637a3383065.ctex"]
 
 [params]
 
@@ -26,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

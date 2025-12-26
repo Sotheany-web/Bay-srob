@@ -12,7 +12,8 @@ var rotation_y := 0.0  # horizontal look
 var held_item: Node3D = null
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  # show cursor when menu loadsshow_main_menu()
+
 
 #handle the movement of the mouse, camera and character 
 #- Rotates the player horizontally (rotation_y) and the camera pivot vertically (rotation_x).- Vertical rotation is clamped between -80° and 80° to prevent flipping
